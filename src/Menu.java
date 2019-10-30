@@ -24,7 +24,8 @@ public class Menu {
                 new LinkedParalelSearch(10, 4);
                 break;
             case 2:
-                int arrayLength = 21;
+                int arrayLength = 20;
+                //TODO: EN CAS DE NO SER UN NUMERO DIVISIBLE (20 CASELLES ENTRE 3 THREADS), ELS NOMBRES RESTANTS NO SON CERCATS
                 int[] ArrayO2 = new int[arrayLength];
                 Random random = new Random();
                 System.out.println("Es busca el numero \"" + 4 + "\" en el array:");
@@ -34,7 +35,9 @@ public class Menu {
                 }
                 new ArrayParalelSearch(4, ArrayO2, 3);
                 int casella = ArrayParalelSearch.cercaParallela();
-                System.out.println("\n\nS'ha trobat el nombre a cerca en la casella " + casella);
+                if (casella == -1){
+                    System.out.println("El nombre buscat no es troba en el array.");
+                }
                 break;
             case 3:
                 arrayLength = 21;
@@ -44,7 +47,8 @@ public class Menu {
                     ArrayO1[i] = random.nextInt(10);
                     System.out.print(ArrayO1[i] + ",");
                 }
-                new ArrayParalelSearchSharedMem(4, ArrayO1, 3);
+                new ArrayParalelSearchSharedMem(4, ArrayO1, 3).cercaParallela();
+                //ArrayParalelSearchSharedMem.cercaParallela();
                 break;
             case 4:
                 break;

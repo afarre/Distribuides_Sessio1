@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2676eec3-c814-4582-b635-e0753058af9e" name="Default Changelist" comment="" />
+    <list default="true" id="2676eec3-c814-4582-b635-e0753058af9e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Exercici1/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Exercici1/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Exercici1/Option1/LinkedParalelSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Exercici1/Option1/LinkedParalelSearch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Exercici1/Option2/ArrayParalelSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Exercici1/Option2/ArrayParalelSearch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Exercici1/Option2/ArrayParalelSearchThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Exercici1/Option2/ArrayParalelSearchThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Exercici1/Option3/ArrayParalelSearchSharedMem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Exercici1/Option3/ArrayParalelSearchSharedMem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Option2/ArrayParalelSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Option2/ArrayParalelSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Option2/ArrayParalelSearchThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Option2/ArrayParalelSearchThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Option3/ArrayParalelSearchSharedMem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Option3/ArrayParalelSearchSharedMem.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +30,13 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1S3mjWpR7DocIM9UMWjyKDTyMzT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Llenguatges/Practica" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
@@ -109,6 +126,17 @@
       <updated>1570800789930</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Exercici1$Main.ic" NAME="Main Coverage Results" MODIFIED="1571480611312" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

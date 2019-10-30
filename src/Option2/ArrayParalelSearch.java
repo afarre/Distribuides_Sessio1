@@ -44,6 +44,10 @@ public class ArrayParalelSearch {
             }
             caselles.add(threads.get(i).getCasella());
         }
-        return -1;
+
+        if (caselles.isEmpty()){
+            return -1;
+        }
+        return caselles.get(0);
     }
 }
