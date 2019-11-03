@@ -40,7 +40,7 @@ public class Menu {
                 }
                 break;
             case 3:
-                arrayLength = 21;
+                arrayLength = 20;
                 int[] ArrayO1 = new int[arrayLength];
                 random = new Random();
                 for (int i = 0; i < arrayLength; i++){
