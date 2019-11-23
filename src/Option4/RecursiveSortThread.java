@@ -4,14 +4,12 @@ import java.util.Arrays;
 
 public class RecursiveSortThread extends Thread {
     private int[] array;
-    private RecursiveSortThread parent;
     private RecursiveSortThread firstSon;
     private RecursiveSortThread secondSon;
 
 
-    public RecursiveSortThread(int[] array, RecursiveSortThread parent) {
+    public RecursiveSortThread(int[] array) {
         this.array = array;
-        this.parent = parent;
     }
 
     @Override
@@ -38,9 +36,9 @@ public class RecursiveSortThread extends Thread {
                 System.arraycopy(array, array.length/2, subArray2, 0, (array.length/2) + 1);
             }
 
-            firstSon = new RecursiveSortThread(subArray1, this);
+            firstSon = new RecursiveSortThread(subArray1);
             firstSon.start();
-            secondSon = new RecursiveSortThread(subArray2, this);
+            secondSon = new RecursiveSortThread(subArray2);
             secondSon.start();
 
             try {

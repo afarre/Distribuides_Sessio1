@@ -24,7 +24,7 @@ public class Menu {
         switch (opcio){
             case 1:
                 System.out.println("Es busca el numero \"" + 4 + "\" en el array:");
-                new LinkedParalelSearch(10, 4);
+                new LinkedParalelSearch(11, 4);
                 break;
             case 2:
                 int arrayLength = 20;
@@ -62,7 +62,7 @@ public class Menu {
                     ArrayO3[i] = random.nextInt(10);
                 }
 
-                RecursiveSortThread recursiveSortThread = new RecursiveSortThread(ArrayO3, null);
+                RecursiveSortThread recursiveSortThread = new RecursiveSortThread(ArrayO3);
                 recursiveSortThread.start();
                 try {
                     recursiveSortThread.join();
@@ -70,8 +70,6 @@ public class Menu {
                     e.printStackTrace();
                 }
                 System.out.println("Final sorted array: " + Arrays.toString(recursiveSortThread.getArray()));
-
-
                 break;
         }
     }

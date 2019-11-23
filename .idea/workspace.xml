@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2676eec3-c814-4582-b635-e0753058af9e" name="Default Changelist" comment="Afegida nova classe Runnable per a implementar la cerca de memoria compartida.">
-      <change afterPath="$PROJECT_DIR$/src/Option4/MergeSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Option4/RecursiveData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Option4/RecursiveSortThread.java" afterDir="false" />
+    <list default="true" id="2676eec3-c814-4582-b635-e0753058af9e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Exercici1/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Exercici1/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Exercici1/Option1/LinkedParalelSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Exercici1/Option1/LinkedParalelSearch.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Option1/LinkedParalelSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Option1/LinkedParalelSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Option4/MergeSort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Option4/RecursiveData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Option4/RecursiveSortThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Option4/RecursiveSortThread.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -134,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572779364727</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Merge sort multithread acabat.">
+      <created>1574510414092</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1574510414093</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -153,7 +162,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Canvis. &#10;&#10;Paralel search amb thread -&gt; millor definit els outputs&#10;Paralel search memoria compartida -&gt; Canvi de static a no static per a poder iniciar threads amb this&#10;&#10;Afegits TODO per als dos casos." />
     <MESSAGE value="Afegida nova classe Runnable per a implementar la cerca de memoria compartida." />
-    <option name="LAST_COMMIT_MESSAGE" value="Afegida nova classe Runnable per a implementar la cerca de memoria compartida." />
+    <MESSAGE value="Merge sort multithread acabat." />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge sort multithread acabat." />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
