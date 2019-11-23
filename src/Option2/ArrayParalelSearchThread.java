@@ -1,5 +1,7 @@
 package Option2;
 
+import java.util.Arrays;
+
 public class ArrayParalelSearchThread implements Runnable {
     private int[] fragments;
     private int aBuscar;
@@ -14,15 +16,13 @@ public class ArrayParalelSearchThread implements Runnable {
     @Override
     public void run() {
 
-        System.out.println("\nSoc el thread " + Thread.currentThread().getId() + " i he de buscar el nombre en el array:");
-        for (int i = 0; i < fragments.length; i++){
-            System.out.print(fragments[i] + ",");
-        }
+        System.out.println("Soc el thread " + Thread.currentThread().getId() + " i he de buscar el nombre en el array:");
+        System.out.println(Arrays.toString(fragments));
 
         for (int i = 0; i < fragments.length; i++){
             if (fragments[i] == aBuscar){
                 setCasella(i);
-                System.out.println("\nSoc el thread " + Thread.currentThread().getId() + " i he trobat el nombre en la casella " + getCasella() + " del meu subarray.");
+                System.out.println("Soc el thread " + Thread.currentThread().getId() + " i he trobat el nombre en la casella " + getCasella() + " del meu subarray.");
             }
         }
     }
