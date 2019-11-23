@@ -41,32 +41,41 @@ public class Menu {
                 int casella = ArrayParalelSearch.cercaParallela();
                 for (int i = numThreads*(arrayLength/numThreads); i < arrayLength; i++){
                     if (ArrayO2[i] == aBuscar){
-                        System.out.println("\nSoc el thread " + Thread.currentThread().getId() + " (Menu) i he trobat el nombre en la casella " + i + " del meu subarray.");
+                        System.out.println("\nSoc el thread " + Thread.currentThread().getName() + " i he trobat el nombre en la casella " + i + " del meu subarray.");
                     }
                 }
 
                 break;
             case 3:
-                arrayLength = 20;
-                int[] ArrayO1 = new int[arrayLength];
+                arrayLength = 23;
+                numThreads = 4;
+                aBuscar = 4;
+                int[] ArrayO3 = new int[arrayLength];
                 random = new Random();
                 System.out.println("Es busca el numero \"" + 4 + "\" en el array:");
                 for (int i = 0; i < arrayLength; i++){
-                    ArrayO1[i] = random.nextInt(10);
-                    System.out.print(ArrayO1[i] + ", ");
+                    ArrayO3[i] = random.nextInt(10);
                 }
-                new ArrayParalelSearchSharedMem(4, ArrayO1, 3).cercaParallela();
-                //ArrayParalelSearchSharedMem.cercaParallela();
+                System.out.println(Arrays.toString(ArrayO3));
+                new ArrayParalelSearchSharedMem(4, ArrayO3, 3).cercaParallela();
+
+                for (int i = numThreads*(arrayLength/numThreads); i < arrayLength; i++){
+                    System.out.println("Inicio i a " + i);
+                    if (ArrayO3[i] == aBuscar){
+                        System.out.println("\nSoc el thread " + Thread.currentThread().getName() + " i he trobat el nombre en la casella " + i + " del meu subarray.");
+                    }
+                }
+
                 break;
             case 4:
                 arrayLength = 20;
-                int[] ArrayO3 = new int[arrayLength];
+                int[] ArrayO4 = new int[arrayLength];
                 random = new Random();
                 for (int i = 0; i < arrayLength; i++){
-                    ArrayO3[i] = random.nextInt(10);
+                    ArrayO4[i] = random.nextInt(10);
                 }
 
-                RecursiveSortThread recursiveSortThread = new RecursiveSortThread(ArrayO3);
+                RecursiveSortThread recursiveSortThread = new RecursiveSortThread(ArrayO4);
                 recursiveSortThread.start();
                 try {
                     recursiveSortThread.join();
