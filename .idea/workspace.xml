@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2676eec3-c814-4582-b635-e0753058af9e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Option3/DataRunnable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+    <list default="true" id="2676eec3-c814-4582-b635-e0753058af9e" name="Default Changelist" comment="Afegida nova classe Runnable per a implementar la cerca de memoria compartida.">
+      <change afterPath="$PROJECT_DIR$/src/Option4/MergeSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Option4/RecursiveData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Option4/RecursiveSortThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Exercici1/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Exercici1/Menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Exercici1/Option3/ArrayParalelSearchSharedMem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Exercici1/Option3/ArrayParalelSearchSharedMem.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Option3/ArrayParalelSearchSharedMem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Option3/ArrayParalelSearchSharedMem.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,7 +32,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Llenguatges/Practica" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
@@ -128,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572462918724</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Afegida nova classe Runnable per a implementar la cerca de memoria compartida.">
+      <created>1572779364727</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1572779364727</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -146,7 +152,16 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Canvis. &#10;&#10;Paralel search amb thread -&gt; millor definit els outputs&#10;Paralel search memoria compartida -&gt; Canvi de static a no static per a poder iniciar threads amb this&#10;&#10;Afegits TODO per als dos casos." />
-    <option name="LAST_COMMIT_MESSAGE" value="Canvis. &#10;&#10;Paralel search amb thread -&gt; millor definit els outputs&#10;Paralel search memoria compartida -&gt; Canvi de static a no static per a poder iniciar threads amb this&#10;&#10;Afegits TODO per als dos casos." />
+    <MESSAGE value="Afegida nova classe Runnable per a implementar la cerca de memoria compartida." />
+    <option name="LAST_COMMIT_MESSAGE" value="Afegida nova classe Runnable per a implementar la cerca de memoria compartida." />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="((RecursiveSortThread)this).secondSon" custom="Option4.RecursiveSortThread" />
+        <watch expression="parent" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Exercici1$Main.ic" NAME="Main Coverage Results" MODIFIED="1571480611312" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

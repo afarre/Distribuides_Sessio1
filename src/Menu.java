@@ -1,7 +1,9 @@
 import Option1.LinkedParalelSearch;
 import Option2.ArrayParalelSearch;
 import Option3.ArrayParalelSearchSharedMem;
+import Option4.RecursiveSortThread;
 
+import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
@@ -21,6 +23,7 @@ public class Menu {
 
         switch (opcio){
             case 1:
+                System.out.println("Es busca el numero \"" + 4 + "\" en el array:");
                 new LinkedParalelSearch(10, 4);
                 break;
             case 2:
@@ -31,7 +34,7 @@ public class Menu {
                 System.out.println("Es busca el numero \"" + 4 + "\" en el array:");
                 for (int i = 0; i < arrayLength; i++){
                     ArrayO2[i] = random.nextInt(10);
-                    System.out.print(ArrayO2[i] + ",");
+                    System.out.print(ArrayO2[i] + ", ");
                 }
                 new ArrayParalelSearch(4, ArrayO2, 3);
                 int casella = ArrayParalelSearch.cercaParallela();
@@ -43,20 +46,38 @@ public class Menu {
                 arrayLength = 20;
                 int[] ArrayO1 = new int[arrayLength];
                 random = new Random();
+                System.out.println("Es busca el numero \"" + 4 + "\" en el array:");
                 for (int i = 0; i < arrayLength; i++){
                     ArrayO1[i] = random.nextInt(10);
-                    System.out.print(ArrayO1[i] + ",");
+                    System.out.print(ArrayO1[i] + ", ");
                 }
                 new ArrayParalelSearchSharedMem(4, ArrayO1, 3).cercaParallela();
                 //ArrayParalelSearchSharedMem.cercaParallela();
                 break;
             case 4:
+                arrayLength = 20;
+                int[] ArrayO3 = new int[arrayLength];
+                random = new Random();
+                for (int i = 0; i < arrayLength; i++){
+                    ArrayO3[i] = random.nextInt(10);
+                }
+
+                RecursiveSortThread recursiveSortThread = new RecursiveSortThread(ArrayO3, null);
+                recursiveSortThread.start();
+                try {
+                    recursiveSortThread.join();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                System.out.println("Final sorted array: " + Arrays.toString(recursiveSortThread.getArray()));
+
+
                 break;
         }
     }
 
     /**
-     * Comprova que l'usuari introduiex un enter
+     * Comprova que l'usuari introduiexi un enter
      * @return El numero introduit per l'usuari o -1 en cas de que no hagi introduit un numero
      */
     private int readInt(){
