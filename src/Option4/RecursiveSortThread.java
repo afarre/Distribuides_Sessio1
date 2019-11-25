@@ -14,7 +14,7 @@ public class RecursiveSortThread extends Thread {
 
     @Override
     public void run() {
-        System.out.println("Run del " + Thread.currentThread().getName() + " amb el array " + Arrays.toString(array));
+        //System.out.println("Run del " + Thread.currentThread().getName() + " amb el array " + Arrays.toString(array));
         if (array.length > 1){
 
             int[] subArray1 = null;

@@ -16,8 +16,7 @@ public class ArrayParalelSearchThread implements Runnable {
     @Override
     public void run() {
 
-        System.out.println("Soc el thread " + Thread.currentThread().getId() + " i he de buscar el nombre en el array:");
-        System.out.println(Arrays.toString(fragments));
+        System.out.println("Soc el thread " + Thread.currentThread().getId() + " i he de buscar el nombre en el array:" + Arrays.toString(fragments));
 
         for (int i = 0; i < fragments.length; i++){
             if (fragments[i] == aBuscar){

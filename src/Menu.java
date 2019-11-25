@@ -37,6 +37,7 @@ public class Menu {
                     ArrayO2[i] = random.nextInt(10);
                 }
                 System.out.print(Arrays.toString(ArrayO2) + "\n");
+
                 new ArrayParalelSearch(aBuscar, ArrayO2, numThreads);
                 int casella = ArrayParalelSearch.cercaParallela();
                 for (int i = numThreads*(arrayLength/numThreads); i < arrayLength; i++){
@@ -44,8 +45,8 @@ public class Menu {
                         System.out.println("\nSoc el thread " + Thread.currentThread().getName() + " i he trobat el nombre en la casella " + i + " del meu subarray.");
                     }
                 }
-
                 break;
+
             case 3:
                 arrayLength = 23;
                 numThreads = 4;
@@ -57,10 +58,10 @@ public class Menu {
                     ArrayO3[i] = random.nextInt(10);
                 }
                 System.out.println(Arrays.toString(ArrayO3));
-                new ArrayParalelSearchSharedMem(4, ArrayO3, 3).cercaParallela();
+
+                new ArrayParalelSearchSharedMem(aBuscar, ArrayO3, numThreads).cercaParallela();
 
                 for (int i = numThreads*(arrayLength/numThreads); i < arrayLength; i++){
-                    System.out.println("Inicio i a " + i);
                     if (ArrayO3[i] == aBuscar){
                         System.out.println("\nSoc el thread " + Thread.currentThread().getName() + " i he trobat el nombre en la casella " + i + " del meu subarray.");
                     }
@@ -68,23 +69,55 @@ public class Menu {
 
                 break;
             case 4:
-                arrayLength = 20;
+                arrayLength = 23;
                 int[] ArrayO4 = new int[arrayLength];
+                int[] Array04v2 = new int[arrayLength];
                 random = new Random();
                 for (int i = 0; i < arrayLength; i++){
                     ArrayO4[i] = random.nextInt(10);
                 }
+                System.out.println("Array a ordenar: " + Arrays.toString(ArrayO4));
+
+                System.arraycopy(ArrayO4, 0, Array04v2, 0, arrayLength);
+
 
                 RecursiveSortThread recursiveSortThread = new RecursiveSortThread(ArrayO4);
+                long startTime = System.nanoTime();
                 recursiveSortThread.start();
                 try {
                     recursiveSortThread.join();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
+                long endTime = System.nanoTime();
                 System.out.println("Final sorted array: " + Arrays.toString(recursiveSortThread.getArray()));
+                System.out.println("Time taken: " + (endTime - startTime)/1000000 + "ms");
+
+
+                startTime = System.nanoTime();
+
+                int k;
+                int minValue;
+                for (int i = 0; i < Array04v2.length-1; i++) {
+                    k = i;
+                    for (int j = k + 1; j < Array04v2.length; j++) {
+                        if (Array04v2[k] > Array04v2[j]) { //change to a[k]<a[j] to sort in the descending order
+                            k = j; // record index of the smallest value
+                        }
+                    }
+                    if (k != i) { // to avoid swapping with self
+                        minValue = Array04v2[k];
+                        Array04v2[k] = Array04v2[i];
+                        Array04v2[i] = minValue;
+                    }
+                }
+
+                endTime = System.nanoTime();
+                System.out.println("Final sorted array (sequential): " + Arrays.toString(ArrayO4));
+                System.out.println("Time taken (sequential): " + (endTime - startTime)/1000000 + "ms");
                 break;
         }
+
     }
 
     /**

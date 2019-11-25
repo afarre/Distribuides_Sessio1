@@ -15,7 +15,7 @@ public class DataRunnable implements Runnable {
 
     @Override
     public void run() {
-        //System.out.println("Inicio thread amb el index d'inici " + startIndex + " i amb el index de fi " + endIndex + ". Soc el thread " + Thread.currentThread().getId() + "/" + Thread.currentThread().getName());
+        System.out.println("Start thread " + Thread.currentThread().getName() + " amb el inicial a " + startIndex + " i amb el index final " + endIndex);
         for (int i = startIndex; i < endIndex; i++){
             if (Array[i] == aBuscar){
                 System.out.println("He trobat el numero buscat en el thread " + Thread.currentThread().getName() + " a la posicio " + i);

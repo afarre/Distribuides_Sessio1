@@ -1,6 +1,5 @@
 package Option3;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class ArrayParalelSearchSharedMem {
@@ -21,19 +20,35 @@ public class ArrayParalelSearchSharedMem {
     }
 
     public int cercaParallela() {
+        long startTime = System.nanoTime();
+        ArrayList<Thread> threadArrayList = new ArrayList<>();
         if (NumThreads > Array.length) {
             System.out.println("Error. El nombre de threads no pot ser major que la mida del array.");
             System.exit(0);
         } else {
-            for (int i = 0; i <= fragment; i+=NumThreads){
-                System.out.println("Inicio cerca del index " + start + " al index " + end);
+            for (int i = 0; i < NumThreads; i++){
+                //System.out.println("Inicio cerca del index " + start + " al index " + end);
 
                 DataRunnable d1 = new DataRunnable(aBuscar, Array, start, end);
-                new Thread(d1).start();
+                Thread thread = new Thread(d1);
+                threadArrayList.add(thread);
+                thread.start();
                 start = end;
                 end += fragment;
             }
         }
+
+        //bucle d'espera dels threads per a comptar el temps d'execucio
+        for (Thread thread: threadArrayList) {
+            try {
+                thread.join();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+
+        long endTime = System.nanoTime();
+        System.out.println("Time taken (shared mem): " + (endTime - startTime)/1000000 + "ms");
         return -1;
     }
 }

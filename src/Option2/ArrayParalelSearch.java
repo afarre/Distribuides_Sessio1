@@ -15,6 +15,7 @@ public class ArrayParalelSearch {
     }
 
     public static int cercaParallela() {
+        long startTime = System.nanoTime();
         if (NumThreads > Array.length){
             System.out.println("Error. El nombre de threads no pot ser major que la mida del array.");
             System.exit(0);
@@ -33,17 +34,25 @@ public class ArrayParalelSearch {
 
         ArrayList<ArrayParalelSearchThread> threads = new ArrayList<>();
         ArrayList<Integer> caselles = new ArrayList<>();
+        ArrayList<Thread> threadArrayList = new ArrayList<>();
         for (int i = 0; i < fragments.size(); i++){
             threads.add(new ArrayParalelSearchThread(fragments.get(i), aBuscar));
             Thread thread = new Thread(threads.get(i));
+            threadArrayList.add(thread);
             thread.start();
+            caselles.add(threads.get(i).getCasella());
+        }
+
+        //bucle d'espera dels threads per a comptar el temps d'execucio
+        for (Thread thread: threadArrayList) {
             try {
                 thread.join();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            caselles.add(threads.get(i).getCasella());
         }
+        long endTime = System.nanoTime();
+        System.out.println("Time taken: " + (endTime - startTime)/1000000 + "ms\n");
 
         if (caselles.isEmpty()){
             return -1;
