@@ -23,56 +23,46 @@ public class Menu {
 
         switch (opcio){
             case 1:
-                System.out.println("Es busca el numero \"" + 4 + "\" en el array:");
-                new LinkedParalelSearch(11, 4);
+                int aBuscar = 100;
+                int arrayLength = 100;
+                System.out.println("Es busca el numero \"" + aBuscar + "\" en el array:");
+                new LinkedParalelSearch(arrayLength, 1);
                 break;
             case 2:
-                int arrayLength = 23;
-                int numThreads = 4;
-                int aBuscar = 4;
+                aBuscar = 99;
+                arrayLength = 100;
+                int numThreads = 6;
                 int[] ArrayO2 = new int[arrayLength];
-                Random random = new Random();
-                System.out.println("Es busca el numero \"" + 4 + "\" en el array:");
+                System.out.println("Es busca el numero \"" + aBuscar + "\" en el array:");
                 for (int i = 0; i < arrayLength; i++){
-                    ArrayO2[i] = random.nextInt(10);
+                    ArrayO2[i] = i;
                 }
                 System.out.print(Arrays.toString(ArrayO2) + "\n");
 
                 new ArrayParalelSearch(aBuscar, ArrayO2, numThreads);
                 int casella = ArrayParalelSearch.cercaParallela();
-                for (int i = numThreads*(arrayLength/numThreads); i < arrayLength; i++){
-                    if (ArrayO2[i] == aBuscar){
-                        System.out.println("\nSoc el thread " + Thread.currentThread().getName() + " i he trobat el nombre en la casella " + i + " del meu subarray.");
-                    }
-                }
+
                 break;
 
             case 3:
-                arrayLength = 23;
-                numThreads = 4;
-                aBuscar = 4;
+                arrayLength = 100;
+                numThreads = 6;
+                aBuscar = 99;
                 int[] ArrayO3 = new int[arrayLength];
-                random = new Random();
-                System.out.println("Es busca el numero \"" + 4 + "\" en el array:");
+                System.out.println("Es busca el numero \"" + aBuscar + "\" en el array:");
                 for (int i = 0; i < arrayLength; i++){
-                    ArrayO3[i] = random.nextInt(10);
+                    ArrayO3[i] = i;
                 }
                 System.out.println(Arrays.toString(ArrayO3));
 
                 new ArrayParalelSearchSharedMem(aBuscar, ArrayO3, numThreads).cercaParallela();
-
-                for (int i = numThreads*(arrayLength/numThreads); i < arrayLength; i++){
-                    if (ArrayO3[i] == aBuscar){
-                        System.out.println("\nSoc el thread " + Thread.currentThread().getName() + " i he trobat el nombre en la casella " + i + " del meu subarray.");
-                    }
-                }
 
                 break;
             case 4:
                 arrayLength = 23;
                 int[] ArrayO4 = new int[arrayLength];
                 int[] Array04v2 = new int[arrayLength];
-                random = new Random();
+                Random random = new Random();
                 for (int i = 0; i < arrayLength; i++){
                     ArrayO4[i] = random.nextInt(10);
                 }

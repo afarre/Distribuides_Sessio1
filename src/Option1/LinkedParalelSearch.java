@@ -17,7 +17,8 @@ public class LinkedParalelSearch implements Runnable{
         list = new LinkedList<>();
         Random random = new Random();
         for (int i = 0; i < size; i++){
-            list.add(random.nextInt(10));
+            //list.add(random.nextInt(10));
+            list.add(i);
             System.out.print(list.get(i) + ", ");
         }
 
@@ -34,14 +35,14 @@ public class LinkedParalelSearch implements Runnable{
     public void run() {
         if (Thread.currentThread().getName().endsWith("0")){
             for (int i = 0; i < size/2; i++){
-                System.out.println("[FRONT] miro index " + i + " valor " + list.get(i));
+                //System.out.println("[FRONT] miro index " + i + " valor " + list.get(i));
                 if (list.get(i) == searchedNum){
                     end(true, i);
                 }
             }
         }else {
             for (int i = size - 1; i >= size/2; i--){
-                System.out.println("[BACK] miro index " + i + " valor " + list.get(i));
+               // System.out.println("[BACK] miro index " + i + " valor " + list.get(i));
                 if (list.get(i) == searchedNum){
                     end(false, i);
                 }

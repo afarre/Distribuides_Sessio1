@@ -4,15 +4,13 @@
     <list default="true" id="2676eec3-c814-4582-b635-e0753058af9e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Exercici1/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Exercici1/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Exercici1/Option1/LinkedParalelSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Exercici1/Option1/LinkedParalelSearch.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Exercici1/Option2/ArrayParalelSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Exercici1/Option2/ArrayParalelSearch.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Exercici1/Option2/ArrayParalelSearchThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Exercici1/Option2/ArrayParalelSearchThread.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Exercici1/Option3/ArrayParalelSearchSharedMem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Exercici1/Option3/ArrayParalelSearchSharedMem.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Option1/LinkedParalelSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Option1/LinkedParalelSearch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Option2/ArrayParalelSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Option2/ArrayParalelSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Option2/ArrayParalelSearchThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Option2/ArrayParalelSearchThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Option3/ArrayParalelSearchSharedMem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Option3/ArrayParalelSearchSharedMem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Option3/DataRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Option3/DataRunnable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Option4/RecursiveSortThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Option4/RecursiveSortThread.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -167,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574522272059</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Push final. El codi esta per opcions, no per comptar temps.">
+      <created>1574692435643</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1574692435643</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -190,7 +195,8 @@
     <MESSAGE value="LinkedParalelSearch acabat. If guarro de quin thread es front i quin back. Neteja de codi del RecursiveSortThread" />
     <MESSAGE value="Modificada la opcio 2 per a que en cas de que el nombre de caselles no sigui divisible sense residu, el residu es busqui en el Main mateix." />
     <MESSAGE value="Modificada la opcio 3 per a que en cas de que el nombre de caselles no sigui divisible sense residu, el residu es busqui en el Main mateix (de forma analoga a la opcio 2, ja que despres s'hauran de comparar)." />
-    <option name="LAST_COMMIT_MESSAGE" value="Modificada la opcio 3 per a que en cas de que el nombre de caselles no sigui divisible sense residu, el residu es busqui en el Main mateix (de forma analoga a la opcio 2, ja que despres s'hauran de comparar)." />
+    <MESSAGE value="Push final. El codi esta per opcions, no per comptar temps." />
+    <option name="LAST_COMMIT_MESSAGE" value="Push final. El codi esta per opcions, no per comptar temps." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -199,11 +205,6 @@
           <url>file://$PROJECT_DIR$/src/Option3/DataRunnable.java</url>
           <line>19</line>
           <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Option3/ArrayParalelSearchSharedMem.java</url>
-          <line>14</line>
-          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

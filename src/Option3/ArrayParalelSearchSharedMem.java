@@ -26,15 +26,26 @@ public class ArrayParalelSearchSharedMem {
             System.out.println("Error. El nombre de threads no pot ser major que la mida del array.");
             System.exit(0);
         } else {
+            int residu = Array.length % NumThreads - 1;
             for (int i = 0; i < NumThreads; i++){
-                //System.out.println("Inicio cerca del index " + start + " al index " + end);
-
-                DataRunnable d1 = new DataRunnable(aBuscar, Array, start, end);
-                Thread thread = new Thread(d1);
-                threadArrayList.add(thread);
-                thread.start();
-                start = end;
-                end += fragment;
+                if (residu >= 0){
+                    //System.out.println("Inicio cerca del index " + start + " al index " + end);
+                    DataRunnable d1 = new DataRunnable(aBuscar, Array, start, ++end);
+                    Thread thread = new Thread(d1);
+                    threadArrayList.add(thread);
+                    thread.start();
+                    start = end;
+                    end += fragment;
+                    residu--;
+                }else {
+                    //System.out.println("Inicio cerca del index " + start + " al index " + end);
+                    DataRunnable d1 = new DataRunnable(aBuscar, Array, start, end);
+                    Thread thread = new Thread(d1);
+                    threadArrayList.add(thread);
+                    thread.start();
+                    start = end;
+                    end += fragment;
+                }
             }
         }
 

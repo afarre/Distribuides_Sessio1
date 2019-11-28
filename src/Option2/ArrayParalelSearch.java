@@ -22,13 +22,26 @@ public class ArrayParalelSearch {
         }else {
             fragments = new ArrayList<>(NumThreads);
             int aux = 0;
+
+            int residu = (Array.length % NumThreads) - 1;
             for (int j = 0; j < NumThreads; j++){
-                int[] auxArray =  new int[Array.length / NumThreads];
-                for (int i = 0; i < (Array.length / NumThreads); i++){
-                    auxArray[i] = Array[aux];
-                    aux++;
+                if (residu >= 0){
+                    int[] auxArray =  new int[Array.length / NumThreads + 1];
+                    for (int i = 0; i < (Array.length / NumThreads); i++){
+                        auxArray[i] = Array[aux];
+                        aux++;
+                    }
+                    auxArray[auxArray.length - 1] = Array[Array.length - 1 - residu];
+                    fragments.add(auxArray);
+                    residu--;
+                }else{
+                    int[] auxArray =  new int[Array.length / NumThreads];
+                    for (int i = 0; i < (Array.length / NumThreads); i++){
+                        auxArray[i] = Array[aux];
+                        aux++;
+                    }
+                    fragments.add(auxArray);
                 }
-                fragments.add(auxArray);
             }
         }
 
